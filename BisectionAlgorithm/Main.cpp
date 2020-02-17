@@ -15,7 +15,7 @@ using namespace std;
 double bisectAlgo(double targetVal, double beginInter, double endInter, double delta)
 {
 	double xVal = (beginInter + endInter) / 2;
-	double funcX = pow(xVal, 3) + pow(2, xVal);
+	double funcX = pow(xVal, 5.3) + pow(3.5, xVal);
 	
 	while (abs(xVal - beginInter) >= delta)
 	{
@@ -27,8 +27,9 @@ double bisectAlgo(double targetVal, double beginInter, double endInter, double d
 		{
 			endInter = xVal;
 		}
-		cout << "our xVal is: " << xVal << endl;
 		xVal = (beginInter + endInter) / 2;
+		funcX = pow(xVal, 3) + pow(2, xVal);
+		cout << "f(x) = " << funcX << endl;
 	}
 	cout << "The value of X is: " << xVal << endl;
 	return xVal;
@@ -36,9 +37,9 @@ double bisectAlgo(double targetVal, double beginInter, double endInter, double d
 
 int main()
 {
-	bisectAlgo(7252938, 0, 500, .001);
+	bisectAlgo(7252938, 1, 1000, .001);
 	
-	bisectAlgo(7252938, 0, 50, .01);
+	bisectAlgo(7252938, 1, 1000, .01);
 
 }
 
