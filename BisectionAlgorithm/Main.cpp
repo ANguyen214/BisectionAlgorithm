@@ -28,7 +28,7 @@ double bisectAlgo(double targetVal, double beginInter, double endInter, double d
 			endInter = xVal;
 		}
 		xVal = (beginInter + endInter) / 2;
-		funcX = pow(xVal, 3) + pow(2, xVal);
+		funcX = pow(xVal, 5.3) + pow(3.5, xVal);
 		cout << "f(x) = " << funcX << endl;
 	}
 	cout << "The value of X is: " << xVal << endl;
