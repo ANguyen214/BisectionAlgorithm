@@ -12,6 +12,7 @@
 
 using namespace std;
 
+//This is the bisection algorithm. 
 double bisectAlgo(double targetVal, double beginInter, double endInter, double delta)
 {
 	double xVal = (beginInter + endInter) / 2;
@@ -35,6 +36,8 @@ double bisectAlgo(double targetVal, double beginInter, double endInter, double d
 	return xVal;
 }
 
+//Main function accepts parameters (my phone#, beginning interval(A), ending interval(B),
+//and the delta/tolerance.
 int main()
 {
 	bisectAlgo(7252938, 1, 1000, .001);
